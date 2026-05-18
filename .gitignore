@@ -1,0 +1,22 @@
+# Mac
+.DS_Store
+
+# Editor / Local tooling
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# Build / Cache
+node_modules/
+dist/
+.cache/
+
+# Local config
+.env
+.env.local
+
+# 画像処理の中間ファイル (本番にはコミットしない)
+*_original.jpg
+*_tmp.*

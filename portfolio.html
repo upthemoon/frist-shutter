@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | First Shutter</title>
+<meta name="description" content="First Shutter (吉岡涼) の作品集。Selected Work / Landscape / Portrait / City / Commission の各カテゴリ。">
+<link rel="canonical" href="https://frist-shutter.com/portfolio.html">
+<meta property="og:title" content="Portfolio | First Shutter">
+<meta property="og:description" content="吉岡涼の写真作品集。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://frist-shutter.com/portfolio.html">
+<meta property="og:image" content="https://frist-shutter.com/assets/images/hero/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<header class="site-header">
+  <div class="nav">
+    <a href="/" class="brand">
+      First Shutter
+      <small>Ryo Yoshioka</small>
+    </a>
+    <button class="nav-toggle" aria-label="menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
+    <nav class="nav-links">
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://instagram.com/roythemoon" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="en-label">Portfolio</div>
+  <h1>作品集</h1>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="selected">Selected</button>
+      <button class="filter-tab" data-filter="landscape">Landscape</button>
+      <button class="filter-tab" data-filter="portrait">Portrait</button>
+      <button class="filter-tab" data-filter="city">City</button>
+      <button class="filter-tab" data-filter="commission">Commission</button>
+    </div>
+
+    <div class="gallery" id="galleryGrid">
+      <div class="gallery-item" data-category="selected portrait">
+        <img src="assets/images/work/01.jpg" alt="『唯君を愛し』— プロカメラマンファイル 2024 (玄光社) 掲載 / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">『唯君を愛し』 — プロカメラマンファイル 2024 掲載</div>
+      </div>
+      <div class="gallery-item" data-category="selected commission">
+        <img src="assets/images/work/03.jpg" alt="第53回 公益社団法人 日本広告写真協会 入選作品 — 2024 / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">第53回 日本広告写真協会 入選 — 2024</div>
+      </div>
+      <div class="gallery-item" data-category="portrait">
+        <img src="assets/images/work/02.jpg" alt="ポートレート — 2025 / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">Portrait — 2025</div>
+      </div>
+      <div class="gallery-item" data-category="selected portrait">
+        <img src="assets/images/work/07.jpg" alt="ポートレート — Selected Work / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">Selected — Portrait</div>
+      </div>
+      <div class="gallery-item" data-category="portrait">
+        <img src="assets/images/work/04.jpg" alt="ポートレート / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">Portrait</div>
+      </div>
+      <div class="gallery-item" data-category="commission">
+        <img src="assets/images/work/05.jpg" alt="コマーシャル作品 / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">Commission</div>
+      </div>
+      <div class="gallery-item" data-category="city">
+        <img src="assets/images/work/06.jpg" alt="都市風景 / 撮影 吉岡涼" loading="lazy">
+        <div class="caption">City</div>
+      </div>
+      <!-- Wix Media Manager から追加写真が届き次第ここに追加 -->
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">×</span>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<footer class="site-footer">
+  <p>
+    <a href="/portfolio.html">Portfolio</a> ·
+    <a href="/about.html">About</a> ·
+    <a href="/contact.html">Contact</a> ·
+    <a href="https://instagram.com/roythemoon" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="/privacy.html">Privacy</a>
+  </p>
+  <p>© Up the Moon LLC. All rights reserved.</p>
+  <p class="footer-meta">First Shutter — Photography by Ryo Yoshioka</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

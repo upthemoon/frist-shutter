@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | First Shutter</title>
+<meta name="description" content="First Shutter (吉岡涼) へのお問い合わせ。撮影のご相談・お見積もり等、お気軽にどうぞ。">
+<link rel="canonical" href="https://frist-shutter.com/contact.html">
+<meta property="og:title" content="Contact | First Shutter">
+<meta property="og:description" content="吉岡涼へのお問い合わせ。撮影のご相談・お見積もり。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://frist-shutter.com/contact.html">
+<meta property="og:image" content="https://frist-shutter.com/assets/images/hero/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<header class="site-header">
+  <div class="nav">
+    <a href="/" class="brand">
+      First Shutter
+      <small>Ryo Yoshioka</small>
+    </a>
+    <button class="nav-toggle" aria-label="menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
+    <nav class="nav-links">
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://instagram.com/roythemoon" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="en-label">Contact</div>
+  <h1>お問い合わせ</h1>
+</section>
+
+<section class="section-sm">
+  <div class="container-narrow">
+    <p style="text-align:center; opacity:0.7; margin-bottom: 60px;">
+      撮影のご相談・お見積もり等、お気軽にお問い合わせください。<br>
+      内容を確認のうえ、2〜3 営業日以内にご返信します。
+    </p>
+
+    <!-- ⚠️ 公開前に Formspree のエンドポイントを取得して action 属性に設定 -->
+    <form class="contact-form" action="https://formspree.io/f/xwvywkpw" method="POST">
+      <div class="form-group">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">電話番号 (任意)</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn-submit">Send Message</button>
+      </div>
+    </form>
+
+    <div class="contact-info">
+      <p>または下記から:</p>
+      <a href="https://instagram.com/roythemoon" target="_blank" rel="noopener">Instagram @roythemoon</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+
+<footer class="site-footer">
+  <p>
+    <a href="/portfolio.html">Portfolio</a> ·
+    <a href="/about.html">About</a> ·
+    <a href="/contact.html">Contact</a> ·
+    <a href="https://instagram.com/roythemoon" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="/privacy.html">Privacy</a>
+  </p>
+  <p>© Up the Moon LLC. All rights reserved.</p>
+  <p class="footer-meta">First Shutter — Photography by Ryo Yoshioka</p>
+</footer>
+
+</body>
+</html>
