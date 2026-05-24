@@ -3,6 +3,13 @@
 /* Reset + base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+/* Accessibility — フォーカスリング (keyboard navigation のみ表示) */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid rgba(245, 245, 245, 0.6);
+  outline-offset: 4px;
+}
 body {
   background: #0a0a0a;
   color: #f5f5f5;
@@ -408,9 +415,10 @@ p { margin-bottom: 1.2em; }
   font-size: 1rem;
   transition: border-color 0.2s ease;
 }
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid rgba(245, 245, 245, 0.6);
+  outline-offset: 2px;
   border-bottom-color: #f5f5f5;
 }
 .form-group textarea {
