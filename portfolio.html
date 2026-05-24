@@ -28,7 +28,7 @@
       First Shutter
       <small>Ryo Yoshioka</small>
     </a>
-    <button class="nav-toggle" aria-label="menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
     <nav class="nav-links">
       <a href="/portfolio.html">Portfolio</a>
       <a href="/about.html">About</a>
@@ -97,8 +97,8 @@
 
 </main>
 
-<div class="lightbox" id="lightbox">
-  <span class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">×</span>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="拡大画像">
+  <button class="lightbox-close" type="button" aria-label="閉じる">×</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 

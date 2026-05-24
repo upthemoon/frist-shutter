@@ -21,32 +21,56 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://frist-shutter.com/#business",
-  "name": "First Shutter",
-  "alternateName": "ファースト・シャッター",
-  "url": "https://frist-shutter.com/",
-  "description": "愛知拠点のフォトグラファー、吉岡涼。ポートレート・風景・コマーシャル・ウェディング・空撮。",
-  "founder": {
-    "@type": "Person",
-    "name": "吉岡 涼",
-    "alternateName": "Ryo Yoshioka",
-    "jobTitle": "Photographer"
-  },
-  "foundingDate": "2022",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "Up the Moon合同会社",
-    "url": "https://upthemoon.co.jp/"
-  },
-  "sameAs": [
-    "https://instagram.com/roythemoon"
-  ],
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "愛知県"
-  },
-  "knowsAbout": ["ポートレート撮影", "風景撮影", "コマーシャル撮影", "ウェディング撮影", "ドローン空撮"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://frist-shutter.com/#ryo-yoshioka",
+      "name": "吉岡 涼",
+      "alternateName": "Ryo Yoshioka",
+      "jobTitle": "Photographer",
+      "url": "https://frist-shutter.com/",
+      "sameAs": [
+        "https://instagram.com/roythemoon"
+      ],
+      "award": [
+        "Tokyo International Foto Awards 2022 入選",
+        "International Photography Awards 2022 入選",
+        "International Photography Awards 2023 入選 (4作品)",
+        "第53回 公益社団法人 日本広告写真協会 入選 2024"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "name": "一等無人航空機操縦士",
+        "dateCreated": "2025"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Up the Moon合同会社",
+        "url": "https://upthemoon.co.jp/"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://frist-shutter.com/#business",
+      "name": "First Shutter",
+      "alternateName": "ファースト・シャッター",
+      "url": "https://frist-shutter.com/",
+      "description": "愛知拠点のフォトグラファー、吉岡涼。ポートレート・風景・コマーシャル・ウェディング・空撮。",
+      "founder": { "@id": "https://frist-shutter.com/#ryo-yoshioka" },
+      "foundingDate": "2022",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Up the Moon合同会社",
+        "url": "https://upthemoon.co.jp/"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "愛知県"
+      },
+      "knowsAbout": ["ポートレート撮影", "風景撮影", "コマーシャル撮影", "ウェディング撮影", "ドローン空撮"]
+    }
+  ]
 }
 </script>
 
@@ -68,7 +92,7 @@
       First Shutter
       <small>Ryo Yoshioka</small>
     </a>
-    <button class="nav-toggle" aria-label="menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
     <nav class="nav-links">
       <a href="/portfolio.html">Portfolio</a>
       <a href="/about.html">About</a>

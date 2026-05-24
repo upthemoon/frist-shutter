@@ -165,21 +165,43 @@
         const img = item.querySelector('img');
         if (img && img.src) {
           lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt || '';
           lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          const closeBtn = lightbox.querySelector('.lightbox-close');
+          if (closeBtn) closeBtn.focus();
         }
       });
     });
 
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    };
+
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-        lightbox.classList.remove('open');
+        closeLightbox();
       }
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-        lightbox.classList.remove('open');
+        closeLightbox();
       }
+    });
+  }
+
+  // ===== 8. Nav toggle (aria-expanded sync + close on link click) =====
+  function initNavToggle() {
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (!toggle || !navLinks) return;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
 
@@ -192,5 +214,6 @@
     initCounter();
     initGalleryFilter();
     initLightbox();
+    initNavToggle();
   });
 })();

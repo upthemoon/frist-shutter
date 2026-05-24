@@ -475,9 +475,13 @@ p { margin-bottom: 1.2em; }
   top: 24px;
   right: 32px;
   font-size: 2rem;
+  background: none;
+  border: none;
   color: #f5f5f5;
   cursor: pointer;
   opacity: 0.7;
+  padding: 8px 16px;
+  line-height: 1;
   transition: opacity 0.2s ease;
 }
 .lightbox-close:hover { opacity: 1; }
